@@ -12,8 +12,9 @@ public class App {
         IPrimeNumber primeNumber = cacheProxy.getProxy(new PrimeNumberImpl());
 
 //        System.out.println(primeNumber.isPrime(4));
-        HashSet<Integer> hashSet = (HashSet<Integer>) primeNumber.getPrimeNumberSet(1, 3);
-        HashSet<Integer> set = (HashSet<Integer>) SetService.getNumSet(1,10);
+        primeNumber.getPrimeNumberSet(SetService.getNumSet(1,10));
+        primeNumber.getPrimeNumberSet(SetService.getNumSet(1,10));
+        primeNumber.getPrimeNumberSet(SetService.getNumSet(1,11));
         System.out.println("cdsd");
     }
 }

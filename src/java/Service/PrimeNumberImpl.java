@@ -19,12 +19,12 @@ public class PrimeNumberImpl implements IPrimeNumber {
     }
     @CacheSave(type = CacheType.JVMMemory)
     @Override
-    public Set<Integer> getPrimeNumberSet(int st, int fin) throws Exception {
-        if (st > fin) throw new Exception("начальное значение больше конечного");
-        return IntStream.rangeClosed(st, fin)
+    public Set<Integer> getPrimeNumberSet(Set<Integer> numberSet) throws Exception {
+        return numberSet.parallelStream()
                 .filter(this::isPrime)
-                .boxed()
-                .collect(Collectors.toCollection(HashSet::new));
+                .collect(Collectors.toSet());
+
+
     }
 
 }
