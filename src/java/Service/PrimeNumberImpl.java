@@ -17,10 +17,10 @@ public class PrimeNumberImpl implements IPrimeNumber {
         return IntStream.rangeClosed(2, (int) Math.sqrt(v))
                 .noneMatch(value -> v % value == 0);
     }
-    @CacheSave(type = CacheType.JVMMemory)
+    @CacheSave(type = CacheType.File)
     @Override
-    public Set<Integer> getPrimeNumberSet(Set<Integer> numberSet) throws Exception {
-        return numberSet.parallelStream()
+    public HashSet<Integer> getPrimeNumberSet(HashSet<Integer> numberSet) throws Exception {
+        return (HashSet<Integer>) numberSet.parallelStream()
                 .filter(this::isPrime)
                 .collect(Collectors.toSet());
 

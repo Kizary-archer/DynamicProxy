@@ -1,11 +1,12 @@
 package Service;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 public interface IPrimeNumber extends Serializable {
 
-    public boolean isPrime(Integer v);
-    public Set<Integer> getPrimeNumberSet(Set<Integer> numberSet) throws Exception;
+     boolean isPrime(Integer v);
+     HashSet<Integer> getPrimeNumberSet(HashSet<Integer> numberSet) throws Exception;
 
 }

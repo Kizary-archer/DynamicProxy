@@ -7,8 +7,8 @@ import java.util.stream.IntStream;
 
 public class SetService {
 
-    public static Set<Integer> getNumSet(Integer st, Integer fin) {
-        return IntStream.rangeClosed(st, fin)
+    public static HashSet<Integer> getNumSet(Integer st, Integer fin) {
+        return (HashSet<Integer>) IntStream.rangeClosed(st, fin)
                 .boxed()
                 .collect(Collectors.toSet());
     }

@@ -6,22 +6,22 @@ import java.util.Set;
 
 public class CacheEntity implements Serializable {
 
-    private Set<Integer> numbers = new HashSet<>();
-    private Set<Integer> primeNumbers = new HashSet<>();
+    private HashSet<Integer> numbers = new HashSet<>();
+    private HashSet<Integer> primeNumbers = new HashSet<>();
 
     public CacheEntity() {
     }
 
-    public CacheEntity(Set<Integer> numbers, Set<Integer> primeNumbers) {
+    public CacheEntity(HashSet<Integer> numbers, HashSet<Integer> primeNumbers) {
         this.numbers = numbers;
         this.primeNumbers = primeNumbers;
     }
 
-    public Set<Integer> getNumbers() {
+    public HashSet<Integer> getNumbers() {
         return numbers;
     }
 
-    public Set<Integer> getPrimeNumbers() {
+    public HashSet<Integer> getPrimeNumbers() {
         return primeNumbers;
     }
 
